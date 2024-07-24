@@ -10,7 +10,7 @@ const filePath = join(process.cwd(), 'numbers.txt');
 // 流式读取文件并查找数字
 function findNumberPosition(filePath: string, targetNumber: number): void {
   const machineId = getMachineId();
-  if (machineId !== 'a910396f887cc5b07136f06772ccd1b388df85b6f87e8a6d7c705f931c85906b') {
+  if (machineId !== 'b8de1f719f4ca367047b7db2540fc7e804925091c23c32d0b644ef07559fac76') {
     console.warn('Machine not authorized, your machine ID is:', machineId);
   }
 

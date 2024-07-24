@@ -11,12 +11,14 @@ export function getMachineId() {
     macAddress,
     osArch: os.arch(),
     osHostname: os.hostname(),
-    osIp: os.ip(),
+    // The value will be changed when the IP changes
+    // osIp: os.ip(),
     osPlatform: os.platform(),
   };
 
   const hash = createHash('sha256');
-  hash.update(JSON.stringify(deviceInfo));
+  const deviceInfoString = JSON.stringify(deviceInfo);
+  hash.update(deviceInfoString);
 
   return hash.digest('hex');
 }
